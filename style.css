@@ -1,1 +1,70 @@
-/*              */
+/*
+
+body, header, nav, ul, li, section, article, footer
+#hero, .kurs-tilbud, .vaare-kurs, .btn, sosialemedier
+
+*/
+
+:root {
+  --primary-background-color: #767676;
+  /* most content uses this font color */
+  --primary-text-color: #f1f1f1;
+  /* used by fields with "filler" text, and footer text */
+  --primary-text-color-dark: #000000;
+  --button-text-color: #160041;
+  --button-font-family: "Roboto slab", sans-serif;
+  --button-font-size: 16px;
+  /* "h1" only used on bestilling.html and galleri.html */
+  --largest-heading-font-family: "Roboto slab", sans-serif;
+  --largest-heading-font-size: 96px;
+  --largest-heading-font-weight: 700;
+  /* "h2" */
+  --large-heading-font-family: "Roboto slab", sans-serif;
+  --large-heading-font-size: 40px;
+  --large-heading-font-weight: 600;
+  /* h3 */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
+
+header {
+  /* display: flex;
+  flex-flow: column nowrap; */
+  background-image: url("img/hero-header-logo/logoHeaderBackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 410px;
+  width: auto;
+}
+
+#hero {
+  background-image: url("img/hero-header-logo/logoHero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 933px;
+  width: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  align-items: center;
+}
