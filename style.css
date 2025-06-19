@@ -50,13 +50,18 @@ header {
   width: auto;
 }
 
-#hero {
-  background-image: url("img/hero-header-logo/logoHero.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 933px;
-  width: auto;
+nav,
+header,
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  left: 10em;
 }
 
 ul {
@@ -67,4 +72,19 @@ ul {
   flex-wrap: wrap;
   gap: 2em;
   align-items: center;
+}
+
+#hero {
+  background-image: url("img/hero-header-logo/logoHero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 933px;
+  width: auto;
+}
+
+.kurs-tilbud img {
+  display: flex;
+  width: 451px;
+  height: auto;
 }
