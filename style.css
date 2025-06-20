@@ -28,6 +28,8 @@ Will come back at a later date to make this responsive with media queries.
   --large-heading-font-weight: 600;
   /* h3 */
 
+  --margin-top-header-main-divider: 1em;
+
   /* linker */
   --default-link-padding: 1em 2em;
   --default-border-radius: 25px;
@@ -62,6 +64,13 @@ html {
 
 body {
   background-color: var(--primary-background-color);
+}
+
+h1 {
+  font-family: var(--largest-heading-font-family);
+  font-size: var(--largest-heading-font-size);
+  font-weight: var(--largest-heading-font-weight);
+  color: var(--primary-text-color);
 }
 
 h3 {
@@ -112,7 +121,7 @@ ul {
   background-position: top center;
   height: 933px;
   width: auto;
-  margin-top: 1.5em;
+  margin-top: var(--margin-top-header-main-divider);
 }
 
 .kurs-tilbud img {
@@ -218,4 +227,29 @@ a.btn {
 
 .icon-link:hover {
   transform: rotate3d(0, 1, 0, 360deg);
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Tilbakemelding */
+.tilbakemelding-skjema {
+  display: flex;
+}
+
+.tilbakemeldinger-deltakere {
+  display: flex;
 }
