@@ -29,6 +29,8 @@ Will come back at a later date to make this responsive with media queries.
   /* h3 */
 
   /* linker */
+  --default-link-padding: 1em 2em;
+  --default-border-radius: 25px;
   --link-text-color: #160041;
   --link-text-hover-color: #160041;
   --link-text-visited-color: #160041;
@@ -41,12 +43,14 @@ Will come back at a later date to make this responsive with media queries.
   );
 }
 
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* link reset */
 a {
   all: unset;
   cursor: pointer;
@@ -58,6 +62,10 @@ html {
 
 body {
   background-color: var(--primary-background-color);
+}
+
+h3 {
+  padding: 0.3em 0em 1em 0em;
 }
 
 header {
@@ -116,10 +124,7 @@ ul {
 .linker-navigering {
   background-color: var(--link-background-color);
   color: var(--link-text-color);
-  border-radius: 25px;
-  padding-left: 2em;
-  padding-right: 2em;
-  height: 50px;
+  padding: var(--default-link-padding);
 }
 
 .btn,
@@ -128,6 +133,7 @@ ul {
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
   color: var(--button-text-color);
+  border-radius: var(--default-border-radius);
 }
 
 .btn:hover,
@@ -137,9 +143,42 @@ ul {
 }
 
 footer {
+  background-color: #d9d9d9;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.column {
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  display: flex;
+  min-width: 25em;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 1em 2em;
+}
+
+.column-txt-center {
   display: flex;
   flex-direction: column;
-  background-color: #d9d9d9;
+  line-height: 1.5;
+  min-width: 25em;
+  height: 100%;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.sosiale-medier {
+  display: flex;
+  gap: 2em;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 #footerButton {
@@ -149,7 +188,34 @@ footer {
   justify-content: flex-start;
 }
 
+.btn {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #919191;
+  padding: var(--default-link-padding);
+  border: 0px;
+  max-width: fit-content;
+}
+
+a.btn {
+  all: unset;
+  display: inline-flex;
+  text-decoration: none;
+  padding: var(--default-link-padding);
+}
+
 .sosiale-medier img {
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
+}
+
+.icon-link {
+  display: inline-block;
+  transition: transform 500ms ease-in-out;
+}
+
+.icon-link:hover {
+  transform: rotate3d(0, 1, 0, 360deg);
 }
