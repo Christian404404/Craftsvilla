@@ -3,6 +3,9 @@
 body, header, nav, ul, li, section, article, footer
 #hero, .kurs-tilbud, .vaare-kurs, .btn, sosialemedier
 
+Since we haven't learned about media queries yet, this CSS file is not responsive.
+Wrapping occurs(by choice), this is just not ideal, and temporary.
+Will come back at a later date to make this responsive with media queries.
 */
 
 :root {
@@ -14,6 +17,7 @@ body, header, nav, ul, li, section, article, footer
   --button-text-color: #160041;
   --button-font-family: "Roboto slab", sans-serif;
   --button-font-size: 16px;
+  --button-font-weight: 400;
   /* "h1" only used on bestilling.html and galleri.html */
   --largest-heading-font-family: "Roboto slab", sans-serif;
   --largest-heading-font-size: 96px;
@@ -23,12 +27,29 @@ body, header, nav, ul, li, section, article, footer
   --large-heading-font-size: 40px;
   --large-heading-font-weight: 600;
   /* h3 */
+
+  /* linker */
+  --link-text-color: #160041;
+  --link-text-hover-color: #160041;
+  --link-text-visited-color: #160041;
+  --link-background-color: rgba(236, 236, 236, 0.75);
+  --link-background-hover-color: linear-gradient(
+    90deg,
+    rgba(138, 0, 69, 0.75) 0%,
+    rgba(240, 0, 120, 0.75) 49%,
+    rgba(240, 0, 120, 0.75) 100%
+  );
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
 }
 
 html {
@@ -55,13 +76,15 @@ header,
 li {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 nav {
   position: relative;
-  left: 10em;
+  display: flex;
+  flex-direction: row;
+  padding-right: 5em;
 }
 
 ul {
@@ -70,7 +93,7 @@ ul {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
+  gap: 3.5em;
   align-items: center;
 }
 
@@ -78,13 +101,55 @@ ul {
   background-image: url("img/hero-header-logo/logoHero.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   height: 933px;
   width: auto;
+  margin-top: 1.5em;
 }
 
 .kurs-tilbud img {
   display: flex;
   width: 451px;
   height: auto;
+}
+
+.linker-navigering {
+  background-color: var(--link-background-color);
+  color: var(--link-text-color);
+  border-radius: 25px;
+  padding-left: 2em;
+  padding-right: 2em;
+  height: 50px;
+}
+
+.btn,
+.linker-navigering {
+  font-family: var(--button-font-family);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  color: var(--button-text-color);
+}
+
+.btn:hover,
+.linker-navigering:hover {
+  background: var(--link-background-hover-color);
+  color: var(--link-text-hover-color);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+}
+
+#footerButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.sosiale-medier img {
+  width: 2em;
+  height: 2em;
 }
