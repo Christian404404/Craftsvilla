@@ -355,7 +355,7 @@ input {
 .tilbakemelding-skjema {
   display: inline-flex;
   flex-direction: column;
-  width: hug-content;
+  width: fit-content;
   max-width: 35%;
   gap: 0.5em;
   padding-left: 0.5em;
@@ -364,14 +364,16 @@ input {
 .tilbakemeldinger-deltakere {
   display: inline-flex;
   flex-direction: column;
-  width: hug-content;
+  width: fit-content;
   max-width: 55%;
   padding-bottom: 2em;
+  color: var(--primary-text-color);
 }
 
 .tilbakemeldinger-deltakere img {
   width: 125px;
   height: 125px;
+  border-radius: var(--default-border-radius);
 }
 
 .main-tilbakemelding {
@@ -409,8 +411,58 @@ input {
 #section-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* this pushes one column left, the other right */
+  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
   padding-top: 1em;
+}
+
+.wrapper-tilbakemelding {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1em;
+  margin: 1.5em 0em;
+  max-width: 70%;
+  align-items: center;
+}
+
+/* Galleri */
+#galleri-senter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--margin-top-header-main-divider);
+  margin-bottom: var(--margin-top-header-main-divider);
+  background-color: var(--background-color-green);
+  border-radius: var(--default-border-radius);
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 1em;
+}
+
+section.gallery img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--default-border-radius);
+  filter: blur(2px);
+}
+
+section.gallery img:hover {
+  filter: blur(0px);
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3em;
+  margin-bottom: var(--margin-top-header-main-divider);
+  margin-top: var(--margin-top-header-main-divider);
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
 }
