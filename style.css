@@ -320,6 +320,7 @@ a.btn {
 .bestilling {
   background-color: var(--background-color-green);
   border-radius: var(--default-border-radius);
+  color: var(--primary-text-color);
 }
 #main-bestilling {
   display: flex;
