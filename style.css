@@ -178,9 +178,9 @@ ul {
 
 .vaare-kurs img {
   filter: blur(2px);
-  transition: filter 500ms ease-in-out;
+  transition: filter 300ms ease-in-out;
 }
-.vaare-kurs img:hover {
+.vaare-kurs:hover img {
   filter: blur(0px);
 }
 
