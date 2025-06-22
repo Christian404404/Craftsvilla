@@ -350,3 +350,41 @@ a.btn {
 input {
   margin: 1em 0em;
 }
+
+/* tilbakemelding / ris og ros */
+.tilbakemelding-skjema {
+  display: inline-flex;
+  flex-direction: column;
+  width: hug-content;
+  max-width: 35%;
+}
+
+.tilbakemeldinger-deltakere {
+  display: inline-flex;
+  flex-direction: column;
+  width: hug-content;
+  max-width: 55%;
+}
+
+.tilbakemeldinger-deltakere img {
+  width: 125px;
+  height: 125px;
+}
+
+.main-tilbakemelding {
+  display: flex;
+  flex-direction: row;
+  margin: 1em 1em;
+  background-color: var(--background-color-green);
+  border-radius: var(--default-border-radius);
+  gap: 2em;
+}
+
+.tilbakemelding-skjema input {
+  width: 50%;
+}
+
+#textarea-special {
+  width: 50%;
+  height: 10em;
+}

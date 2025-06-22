@@ -26,7 +26,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-tilbakemelding">
       <section>
         <article class="tilbakemelding-skjema">
           <h2>
@@ -36,14 +36,24 @@
           <h2>Navn</h2>
           <input type="text" name="Navn" placeholder="Navn..." />
           <h2>E-post(valgfritt)</h2>
-          <input type="text" name="E-post" placeholder="E-post..." />
-          <h2>Din tilbakemelding</h2>
           <input
+            id="input-special"
             type="text"
-            name="Kommentar"
-            placeholder="Legg inn tilbakemelding her..."
+            name="E-post"
+            placeholder="E-post..."
           />
-          <button onclick="location.href='suksess.html'">Send inn</button>
+          <h2>Din tilbakemelding</h2>
+          <textarea
+            id="textarea-special"
+            name="Tilbakemelding"
+            rows="10"
+            cols="30"
+            maxlength="500"
+            placeholder="Legg inn tilbakemelding her..."
+          ></textarea>
+          <button class="btn" onclick="location.href='suksess.html'">
+            Send inn
+          </button>
         </article>
         <article class="tilbakemeldinger-deltakere">
           <h2>Se hva andre har sagt om oss</h2>
