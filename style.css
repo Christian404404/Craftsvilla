@@ -27,6 +27,9 @@ Will come back at a later date to make this responsive with media queries.
   --large-heading-font-size: 40px;
   --large-heading-font-weight: 600;
   /* h3 */
+  --medium-heading-font-family: "Roboto slab", sans-serif;
+  --medium-heading-font-size: 36px;
+  --medium-heading-font-weight: 400;
 
   --margin-top-header-main-divider: 1em;
 
@@ -73,7 +76,18 @@ h1 {
   color: var(--primary-text-color);
 }
 
+h2 {
+  font-family: var(--large-heading-font-family);
+  font-size: var(--large-heading-font-size);
+  font-weight: var(--large-heading-font-weight);
+  color: var(--primary-text-color);
+}
+
 h3 {
+  font-family: var(--medium-heading-font-family);
+  font-size: var(--medium-heading-font-size);
+  font-weight: var(--medium-heading-font-weight);
+  color: var(--primary-text-color);
   padding: 0.3em 0em 1em 0em;
 }
 
@@ -124,10 +138,50 @@ ul {
   margin-top: var(--margin-top-header-main-divider);
 }
 
-.kurs-tilbud img {
+.vaare-kurs img {
+  width: 25em;
+  height: 16em;
+  object-fit: cover;
+  border-radius: var(--default-border-radius);
+}
+
+.vaare-kurs {
   display: flex;
-  width: 451px;
-  height: auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: var(--margin-top-header-main-divider);
+  width: fit-content;
+  margin-bottom: 1em;
+  background-color: rgba(71, 196, 94, 0.15);
+  border-radius: var(--default-border-radius);
+  padding: 1em;
+}
+
+.kurs-tilbud {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 18em;
+  height: 16em;
+  color: var(--primary-text-color);
+}
+
+.kurs-bakgrunn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vaare-kurs img {
+  filter: blur(2px);
+  transition: filter 500ms ease-in-out;
+}
+.vaare-kurs img:hover {
+  filter: blur(0px);
 }
 
 .linker-navigering {
