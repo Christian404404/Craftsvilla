@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="img/favIcon/favIcon.png" type="image/x-icon" />
+    <link rel="icon" href="img/favIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main class="main-tilbakemelding">
-      <section>
+      <section id="section-row">
         <article class="tilbakemelding-skjema">
           <h2>
             Tilbakemelding?<br />Vennligst legg den igjen i<br />
@@ -51,9 +51,11 @@
             maxlength="500"
             placeholder="Legg inn tilbakemelding her..."
           ></textarea>
-          <button class="btn" onclick="location.href='suksess.html'">
-            Send inn
-          </button>
+          <div id="button-wrapper">
+            <button class="btn" onclick="location.href='suksess.html'">
+              Send inn
+            </button>
+          </div>
         </article>
         <article class="tilbakemeldinger-deltakere">
           <h2>Se hva andre har sagt om oss</h2>

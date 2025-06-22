@@ -357,6 +357,8 @@ input {
   flex-direction: column;
   width: hug-content;
   max-width: 35%;
+  gap: 0.5em;
+  padding-left: 0.5em;
 }
 
 .tilbakemeldinger-deltakere {
@@ -364,6 +366,7 @@ input {
   flex-direction: column;
   width: hug-content;
   max-width: 55%;
+  padding-bottom: 2em;
 }
 
 .tilbakemeldinger-deltakere img {
@@ -387,4 +390,27 @@ input {
 #textarea-special {
   width: 50%;
   height: 10em;
+}
+
+#button-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+#div-flex-end {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 1em;
+  margin-right: 1em;
+  width: fit-content;
+}
+
+#section-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* this pushes one column left, the other right */
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 1em;
 }
