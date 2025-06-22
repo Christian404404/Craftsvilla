@@ -10,6 +10,7 @@ Will come back at a later date to make this responsive with media queries.
 
 :root {
   --primary-background-color: #767676;
+  --background-color-green: rgba(71, 196, 94, 0.15);
   /* most content uses this font color */
   --primary-text-color: #f1f1f1;
   /* used by fields with "filler" text, and footer text */
@@ -154,7 +155,7 @@ ul {
   margin-top: var(--margin-top-header-main-divider);
   width: fit-content;
   margin-bottom: 1em;
-  background-color: rgba(71, 196, 94, 0.15);
+  background-color: var(--background-color-green);
   border-radius: var(--default-border-radius);
   padding: 1em;
 }
@@ -306,4 +307,45 @@ a.btn {
 
 .tilbakemeldinger-deltakere {
   display: flex;
+}
+
+/* Bestilling */
+.bestilling h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bestilling {
+  background-color: var(--background-color-green);
+  border-radius: var(--default-border-radius);
+}
+#main-bestilling {
+  display: flex;
+  flex-direction: column;
+  margin: 0em 10em;
+  margin-top: var(--margin-top-header-main-divider);
+  margin-bottom: var(--margin-top-header-main-divider);
+}
+
+.bestilling-av-kurs {
+  padding-left: 5em;
+  margin: 2em;
+}
+
+.kurs-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.kurs-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+input {
+  margin: 1em 0em;
 }

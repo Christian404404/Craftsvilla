@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="img/favIcon/favIcon.png" type="image/x-icon" />
+    <link rel="icon" href="img/favIcon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,30 +26,73 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section></section>
-      <h1></h1>
-      <article class="bestilling-av-kurs">
-        <h2>Navn</h2>
-        <input type="text" name="Navn" placeholder="Skriv inn ditt navn" />
-      </article>
-      <article>
-        <h2>E-post</h2>
-        <input type="text" name="E-post" placeholder="Skriv inn din e-post" />
-      </article>
-      <article>
-        <h2>Tilleggsprodukter</h2>
-        <input type="checkbox" />
-        <p>Tegneutstyr: 200,- kr</p>
-        <input type="checkbox" />
-        <p>Maleutstyr: 450,- kr</p>
-        <input type="checkbox" />
-        <p>Trearbeidutstyr: 350,- kr</p>
-      </article>
-      <article>
-        <h2>Hvor mangen personer er dere?</h2>
-        <input type="text" name="Antall personer" placeholder="0" />
-      </article>
+    <main id="main-bestilling">
+      <section class="bestilling">
+        <h1>Bestilling</h1>
+        <article class="bestilling-av-kurs">
+          <h2>Navn</h2>
+          <input type="text" name="Navn" placeholder="Skriv inn ditt navn" />
+        </article>
+        <article class="bestilling-av-kurs">
+          <h2>E-post</h2>
+          <input type="text" name="E-post" placeholder="Skriv inn din e-post" />
+        </article>
+        <article class="bestilling-av-kurs">
+          <h2>Tilleggsprodukter</h2>
+          <div class="kurs-row">
+            <label
+              ><input type="checkbox" />
+              <p>Tegneutstyr: 200,- kr</p></label
+            >
+            <label
+              ><input type="checkbox" />
+              <p>Maleutstyr: 450,- kr</p></label
+            >
+            <label>
+              <input type="checkbox" />
+              <p>Trearbeidutstyr: 350,- kr</p></label
+            >
+          </div>
+        </article>
+        <article class="bestilling-av-kurs">
+          <h2>Hvor mangen personer er dere?</h2>
+          <input type="text" name="Antall personer" placeholder="0" />
+        </article>
+      </section>
     </main>
+    <footer>
+      <div class="footer-columns">
+        <div class="column-txt-center">
+          <h3>Craftsvilla AS</h3>
+          <p>Adresse: Hundremeterskogen 1, 4040 Narnia</p>
+          <p>Telefon: +47 12 34 56 78</p>
+          <p>E-post: info@craftsvilla.com</p>
+          <p style="font-size: 10px">
+            &copy; 2025 Craftsvilla As. All rights reserved.
+          </p>
+        </div>
+        <div class="column">
+          <button class="btn" onclick="window.scrollTo(0, 0);">
+            Til toppen
+          </button>
+        </div>
+      </div>
+      <div class="column">
+        <div class="sosiale-medier">
+          <a href="pintåresten.html" class="icon-link">
+            <img src="img/SVG/pinterest-brands.svg" alt="" class="pinterest" />
+          </a>
+          <a href="tweittåren.html" class="icon-link">
+            <img src="img/SVG/twitter-brands.svg" alt="" class="twitter" />
+          </a>
+          <a href="instågrammen.html" class="icon-link">
+            <img src="img/SVG/instagram-brands.svg" alt="" class="instagram" />
+          </a>
+          <a href="fjæsbogå.html" class="icon-link">
+            <img src="img/SVG/facebook-brands.svg" alt="" class="facebook" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
